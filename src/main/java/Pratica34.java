@@ -11,24 +11,18 @@
 public class Pratica34 {
 
     public long mdc(long m, long n) {
-        long resultado = 0;
-        /*Primeira verificação*/
-        if (m > n) {
-            if (n == 0) {
-                return m;
-            }
-            resultado = m % n;
-            if (resultado == 0) {
-                return n;
-            } else {
-                mdc(n, resultado);           
+        long resultado = 1;
+        if(n>m){
+            return mdc(n,m);
+        }
+        if(n==0){
+            return m;
+        }
+        if(n>0){
+            return mdc(n,(m%n));
+        }
+        return -1;
 
-            }
-        }
-        else{
-            mdc(n,m);
-        }
-        return resultado;
     }
 
     public static long fatorial(int n) {
