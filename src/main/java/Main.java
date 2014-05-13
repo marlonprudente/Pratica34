@@ -8,6 +8,13 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Olá, Java!");
+        Pratica34 retorno = new Pratica34();
+        long a = 7, b = 5;
+        int c = 20;
+        System.out.println("Resultado MDC: " + retorno.mdc(a, b));
+        System.out.println("Resultado Fatorial: " + retorno.fatorial(c));
+        
+        
+        
     }
 }
